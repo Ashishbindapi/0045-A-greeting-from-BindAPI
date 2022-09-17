@@ -8,8 +8,8 @@
 </head>
 <body>
     <form  method="post">
-        <input type="text"name="first_name"placeholder="First_Name">
-        <input type="text"name="second_name"placeholder="Second_Name">
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="second_name" placeholder="Second Name">
         <button type="submit"name="submit">Submit</button>
         <h2><?php
                 if(isset($_POST['submit']))
