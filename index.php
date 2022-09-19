@@ -38,9 +38,11 @@
     $mobile = $_POST['mobile'];
     
      $sql = "INSERT INTO form (first_name,second_name,mobile)
-	 VALUES ('$first_name','$second_name','$mobile')";
-     if(mysqli_query($conn, $sql)){
-        echo "success";
-    } 
+	         VALUES ('$first_name','$second_name','$mobile')";
+    
+            if(mysqli_query($conn, $sql))
+            {
+                echo "success";
+            } 
  }
 ?>
