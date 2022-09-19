@@ -15,10 +15,10 @@
           $sql = "INSERT INTO form (first_name,second_name,mobile)
                   VALUES ('$first_name','$second_name','$mobile')";
                   
-                 if(mysqli_query($conn, $sql))
-                    {
-                         echo "<h4>success</h4>";
-                    } 
+              if(mysqli_query($conn, $sql))
+                 {
+                    echo "<h4>success</h4>";
+                 } 
             }
         ?>  
 <!DOCTYPE html>
