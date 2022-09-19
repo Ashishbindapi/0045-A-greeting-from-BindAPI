@@ -9,16 +9,16 @@
     <title>Document</title>
 </head>
 <body>
-         <?php
-              $servername='localhost';
-              $username='root';
-              $password='';
-              $dbname = "dev7";
+    <?php
+         $servername='localhost';
+         $username='root';
+         $password='';
+         $dbname = "dev7";
               
-              $conn=mysqli_connect($servername,$username,$password,$dbname);
+         $conn=mysqli_connect($servername,$username,$password,$dbname);
               
-              if(isset($_POST['submit']))
-              {
+        if(isset($_POST['submit']))
+            {
                   $first_name = $_POST['first_name'];
                   $second_name = $_POST['second_name'];
                   $mobile = $_POST['mobile'];
@@ -30,8 +30,8 @@
                           {
                               echo "<h4>success</h4>";
                           } 
-              }
-            ?>
+            }
+        ?>    
     </div>
     <form  method="post" class="text-center mt-4">
         <input type="text" name="first_name" placeholder="First Name" class="mt-2"><br>
