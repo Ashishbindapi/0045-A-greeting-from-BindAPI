@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,17 +18,17 @@
               
         if(isset($_POST['submit']))
             {
-                  $first_name = $_POST['first_name'];
-                  $second_name = $_POST['second_name'];
-                  $mobile = $_POST['mobile'];
+              $first_name = $_POST['first_name'];
+              $second_name = $_POST['second_name'];
+              $mobile = $_POST['mobile'];
                   
-                  $sql = "INSERT INTO form (first_name,second_name,mobile)
-                          VALUES ('$first_name','$second_name','$mobile')";
+              $sql = "INSERT INTO form (first_name,second_name,mobile)
+                      VALUES ('$first_name','$second_name','$mobile')";
                   
-                          if(mysqli_query($conn, $sql))
-                          {
-                              echo "<h4>success</h4>";
-                          } 
+                    if(mysqli_query($conn, $sql))
+                     {
+                         echo "<h4>success</h4>";
+                     } 
             }
         ?>    
     </div>
