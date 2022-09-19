@@ -1,4 +1,26 @@
-
+<?php
+     $servername='localhost';
+    $username='root';
+    $password='';
+    $dbname = "dev7";
+              
+    $conn=mysqli_connect($servername,$username,$password,$dbname);
+              
+    if(isset($_POST['submit']))
+      {
+          $first_name = $_POST['first_name'];
+          $second_name = $_POST['second_name'];
+          $mobile = $_POST['mobile'];
+                  
+          $sql = "INSERT INTO form (first_name,second_name,mobile)
+                  VALUES ('$first_name','$second_name','$mobile')";
+                  
+                 if(mysqli_query($conn, $sql))
+                    {
+                         echo "<h4>success</h4>";
+                    } 
+            }
+        ?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +30,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-         $servername='localhost';
-         $username='root';
-         $password='';
-         $dbname = "dev7";
-              
-         $conn=mysqli_connect($servername,$username,$password,$dbname);
-              
-        if(isset($_POST['submit']))
-            {
-              $first_name = $_POST['first_name'];
-              $second_name = $_POST['second_name'];
-              $mobile = $_POST['mobile'];
-                  
-              $sql = "INSERT INTO form (first_name,second_name,mobile)
-                      VALUES ('$first_name','$second_name','$mobile')";
-                  
-                    if(mysqli_query($conn, $sql))
-                     {
-                         echo "<h4>success</h4>";
-                     } 
-            }
-        ?>    
-    </div>
     <form  method="post" class="text">
         <input type="text" name="first_name" placeholder="First Name"><br>
         <input type="text" name="second_name" placeholder="Second Name"><br>
