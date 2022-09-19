@@ -33,10 +33,10 @@
             }
         ?>    
     </div>
-    <form  method="post" class="text-center mt-4">
-        <input type="text" name="first_name" placeholder="First Name" class="mt-2"><br>
-        <input type="text" name="second_name" placeholder="Second Name"class="mt-2"><br>
-        <input type="text" name="mobile" placeholder="mobile Number"class="mt-2"><br>
+    <form  method="post" class="text">
+        <input type="text" name="first_name" placeholder="First Name"><br>
+        <input type="text" name="second_name" placeholder="Second Name"><br>
+        <input type="text" name="mobile" placeholder="mobile Number"><br>
         <button type="submit"name="submit">Submit</button>
         <?php
            /* if(isset($_POST['submit']))
