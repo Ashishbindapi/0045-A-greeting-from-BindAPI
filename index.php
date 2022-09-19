@@ -1,26 +1,39 @@
 <?php
-    $servername='localhost';
-    $username='root';
-    $password='';
-    $dbname = "dev7";
-              
-    $conn=mysqli_connect($servername,$username,$password,$dbname);
-              
-    if(isset($_POST['submit']))
-      {
-          $first_name = $_POST['first_name'];
-          $second_name = $_POST['second_name'];
-          $mobile = $_POST['mobile'];
-                  
-          $sql = "INSERT INTO form (first_name,second_name,mobile)
-                  VALUES ('$first_name','$second_name','$mobile')";
-                  
-              if(mysqli_query($conn, $sql))
-                 {
-                    echo "<h4>success</h4>";
-                 } 
-            }
-        ?>  
+$servername = "localhost";
+$dbname = "dev7";
+$username = "root";
+$password = "";
+
+$angle = new Database($servername,$dbname,$username,$password);
+if(isset($_POST['submit']))
+{
+   $first_name = $_POST['first_name'];
+   $second_name = $_POST['second_name'];
+   $mobile = $_POST['mobile'];
+
+   $angle->data($first_name,$second_name,$mobile);
+}
+if($_POST)
+{
+    echo "<h4> Success </h4>";
+}
+Class Database
+  {
+    public $conn;
+
+    public function __construct($servername, $dbname, $username, $password)
+    {
+        $this->conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
+    }
+    public function data($first_name,$second_name,$mobile)
+    {
+        $query = "INSERT INTO form VALUES(NULL, ?, ?, ?)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$first_name, $second_name,$mobile]);
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,3 +60,4 @@
     </form>
 </body>
 </html>
+
