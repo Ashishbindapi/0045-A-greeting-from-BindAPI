@@ -36,13 +36,13 @@
         <input type="text" name="mobile" placeholder="mobile Number"><br>
         <button type="submit"name="submit">Submit</button>
         <?php
-           /* if(isset($_POST['submit']))
+            if(isset($_POST['submit']))
                 {
                     $first_name = $_POST['first_name'];
                     $second_name = $_POST['second_name'];
                     $mobile = $_POST['mobile'];
                    echo "<h2>Hello $first_name $second_name $mobile! Greetings from BindAPI</h2>";
-                } */
+                }
             ?>
     </form>
 </body>
