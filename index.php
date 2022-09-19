@@ -11,15 +11,15 @@
         <input type="text" name="first_name" placeholder="First Name">
         <input type="text" name="second_name" placeholder="Second Name">
         <button type="submit"name="submit">Submit</button>
-        <h2><?php
+        <?php
                 if(isset($_POST['submit']))
                 {
                     $first_name = $_POST['first_name'];
                     $second_name = $_POST['second_name'];
-                echo "Hello $first_name $second_name! Greetings from BindAPI";
+                    
+                    echo "<h2>Hello $first_name $second_name! Greetings from BindAPI</h2>";
                 }
             ?>
-        </h2>
     </form>
 </body>
 </html>
