@@ -9,7 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="col-12 text-center">
          <?php
               $servername='localhost';
               $username='root';
