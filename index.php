@@ -40,7 +40,7 @@
                 {
                     $first_name = $_POST['first_name'];
                     $second_name = $_POST['second_name'];
-                    $mobile = $_POST['mobile'];
+                
                    echo "<h2>Hello $first_name $second_name! Greetings from BindAPI</h2>";
                 }
             ?>
